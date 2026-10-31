@@ -58,6 +58,22 @@ pip install -r requirements.txt
 python scrape.py --pages 3
 ```
 
+### 4. [excel-to-pdf-report](excel-to-pdf-report/)
+Turn a spreadsheet into a finished PDF report — KPI band, charts, data table.
+
+- KPIs computed by type: total, average, best period, change vs previous
+- Trend bar chart + cumulative line chart drawn automatically
+- Client branding without code: `--brand "Acme" --color "#e4572e"`
+- Same command next month — the layout is code, not a template to redo
+
+![before/after](docs/report-before-after.png)
+
+```bash
+cd excel-to-pdf-report
+pip install -r requirements.txt
+python report.py
+```
+
 ## About
 
 I build small automation tools in Python (pandas, openpyxl, pdfplumber).
