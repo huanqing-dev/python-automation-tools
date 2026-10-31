@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+sample_data/
+cleaned_master.xlsx
+.DS_Store
