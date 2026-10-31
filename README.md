@@ -41,6 +41,23 @@ python make_sample_pdf.py
 python pdf_tables.py
 ```
 
+### 3. [web-scrape-to-excel](web-scrape-to-excel/)
+Turn a listing website into a clean Excel workbook — driven by a JSON recipe, not a throwaway script.
+
+- Follows pagination, retries with backoff, de-duplicates across pages
+- Fixes broken text encoding (`Â£51.77` → `£51.77`) and converts prices to real numbers
+- Cleans class values (`star-rating Three` → `Three`), resolves relative links
+- Optionally opens each detail page for extra columns
+- New site = a new JSON file, no code change
+
+![before/after](docs/scrape-before-after.png)
+
+```bash
+cd web-scrape-to-excel
+pip install -r requirements.txt
+python scrape.py --pages 3
+```
+
 ## About
 
 I build small automation tools in Python (pandas, openpyxl, pdfplumber).
