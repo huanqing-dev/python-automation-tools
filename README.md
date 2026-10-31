@@ -1,7 +1,7 @@
 # Python automation tools
 
 Small, tested tools for repetitive spreadsheet and document work.
-Each folder is a standalone project with its own README, sample data and tests.
+Each folder is a standalone project with its own README and a runnable demo.
 
 ## Projects
 
@@ -23,9 +23,33 @@ python make_sample_data.py
 python excel_cleaner.py
 ```
 
+### 2. [pdf-table-extractor](pdf-table-extractor/)
+Turn PDF tables into a clean, typed Excel workbook — one sheet per table.
+
+- Rejoins tables that continue across pages and drops the header the PDF repeats
+- Finds border-less tables too, not just ruled grids
+- Discards `Page 2 of 3` style footers
+- Converts `1,234.50`, `(480.00)`, `6%`, `¥ 12,400.00` into real Excel numbers with matching formats
+- Frozen bold header, auto-filter, columns sized to content
+
+![before/after](docs/pdf-before-after.png)
+
+```bash
+cd pdf-table-extractor
+pip install -r requirements.txt
+python make_sample_pdf.py
+python pdf_tables.py
+```
+
 ## About
 
 I build small automation tools in Python (pandas, openpyxl, pdfplumber).
-Fixed scope, fixed price, tested against real edge cases before delivery.
+Fixed scope, fixed price, tested against real edge cases before delivery — every
+claim above is reproducible by running the sample script inside that folder.
 
-Available for freelance work — data cleaning, Excel/CSV automation, report generation.
+Available for freelance work — data cleaning, Excel/CSV automation, PDF extraction,
+report generation.
+
+## License
+
+MIT
