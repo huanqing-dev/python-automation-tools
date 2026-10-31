@@ -1,0 +1,22 @@
+{
+  "name": "books-toscrape",
+  "start_url": "https://books.toscrape.com/catalogue/page-1.html",
+  "item_selector": "article.product_pod",
+  "next_selector": "li.next a",
+  "dedupe_on": ["url"],
+  "numeric": ["price_gbp"],
+  "fields": {
+    "title": "h3 a@title",
+    "price_gbp": "p.price_color",
+    "rating": "p.star-rating@class",
+    "availability": "p.instock.availability",
+    "url": "h3 a@href"
+  },
+  "detail": {
+    "upc": "table.table-striped tr:nth-of-type(1) td",
+    "product_type": "table.table-striped tr:nth-of-type(2) td",
+    "tax_gbp": "table.table-striped tr:nth-of-type(5) td",
+    "stock_count": "table.table-striped tr:nth-of-type(6) td",
+    "description": "#product_description + p"
+  }
+}
