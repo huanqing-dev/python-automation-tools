@@ -74,6 +74,22 @@ pip install -r requirements.txt
 python report.py
 ```
 
+### 5. [image-batch-tool](image-batch-tool/)
+Batch watermark, resize, compress and rename a folder of images.
+
+- Text or logo watermark (tiled or corner), opacity control
+- Resizes by longest edge without upscaling, compresses to JPEG/WebP
+- `--dry-run` shows the full plan before anything is written
+- Every conversion listed in `report.txt`, originals never touched
+
+![before/after](docs/image-before-after.png)
+
+```bash
+cd image-batch-tool
+pip install -r requirements.txt
+python process.py
+```
+
 ## About
 
 I build small automation tools in Python (pandas, openpyxl, pdfplumber).
